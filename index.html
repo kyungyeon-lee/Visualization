@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>World map</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/mapdata/index.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://www.highcharts.com/samples/static/jquery.combobox.js"></script>
+
+
+</head>
+
+<body>
+  <div id="header">
+    <!-- <label class="checkbox style-f"><input type="checkbox" id="checkboxA"> Temperature</label>
+    <label class="checkbox style-f"><input type="checkbox" id="checkboxB"> Co2</label>
+    <label class="checkbox style-f"><input type="checkbox" id="checkboxC"> Sea level</label> -->
+  
+      <label class="checkbox style-f">
+        <input type="checkbox" checked="checked" id="checkboxA"/>
+        <div class="checkbox__checkmark"></div>
+        <div class="checkbox__body">Temperature</div>
+      </label>
+      <label class="checkbox style-f">
+        <input type="checkbox" id="checkboxB"/>
+        <div class="checkbox__checkmark"></div>
+        <div class="checkbox__body">Co2</div>
+      </label>
+      <label class="checkbox style-f">
+        <input type="checkbox"  id="checkboxC"/>
+        <div class="checkbox__checkmark"></div>
+        <div class="checkbox__body">Sea Level</div>
+      </label>
+  </div>
+<!-- 1. temperature -->
+<div id="mapContainer" class="chart-container"></div>
+<div class="slidecontainer" id="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<div id="lineChartContainer" class="chart-container"></div>
+<!-- 2. co2 -->
+<!-- 3. sea level -->
+<figure class="highcharts-figure">
+  <div id="sealevel-container"></div>
+</figure>
+</body>
+<script src="/js/main.js"></script>
+<script src="/js/temperature.js"></script>
+<script src="/js/sealevel.js"></script>
+<script src="/js/co2.js"></script>
+</html>
