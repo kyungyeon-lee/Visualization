@@ -1,5 +1,5 @@
 var data, year, code, country, value, filteredData, countryName;
-var slider = document.getElementById("myRangeCo2");
+var slider2 = document.getElementById("myRangeCo2");
 var year = 1989;
 var values =[];
 
@@ -11,7 +11,7 @@ var years = ['1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '19
 
 (async () => {
     // Load the topology data using fetch
-    const topology = await fetch(
+    const topology2 = await fetch(
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
 
@@ -80,7 +80,7 @@ var years = ['1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '19
         // Create the chart
        return Highcharts.mapChart('mapContainerCo2', {
             chart: {
-                map: topology
+                map: topology2
             },
             title: {
                 text: 'Co2 Changes'
@@ -194,7 +194,7 @@ var years = ['1961', '1962', '1963', '1964', '1965', '1966', '1967', '1968', '19
         //drawLineChart('USA');
     });
 
-    slider.oninput = function() {
+    slider2.oninput = function() {
         console.log(this.value);  
         // 1 ~ 100
         // 1962 ~ 2017
