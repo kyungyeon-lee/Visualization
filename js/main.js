@@ -2,7 +2,7 @@ var data, year, code, country, value, filteredData, countryName;
 var slider = document.getElementById("myRange");
 var year = 2015;
 var values = [];
-var mapContainerMix, mapContainer, lineChartContainer, slidecontainer, sealevelContainer, scatterPlotContainer, linePlotContainer, mapContainerCo2, lineChartContainerCo2, slidecontainerCo2;
+var sealevel_container_co2, mapContainerMix, mapContainer, lineChartContainer, slidecontainer, sealevelContainer, scatterPlotContainer, linePlotContainer, mapContainerCo2, lineChartContainerCo2, slidecontainerCo2;
 
 var years = [
   "1961",
@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
    sealevelContainer = document.getElementById("sealevel-container");
    mapContainerMix = document.getElementById("mapContainerMix");
+   sealevel_container_co2 = document.getElementById("sealevel-container-co2");
 
   mapContainer.style.display = "none";
   lineChartContainer.style.display = "none";
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   slidecontainerCo2.style.display = "none";
   
 sealevelContainer.style.display = "none";
+sealevel_container_co2.style.display = "none";
   mapContainerMix.style.display = "none";
 
 });
@@ -144,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 3:
           console.log("Checkbox 2 and Checkbox 3 are checked.");
+          sealevel_container_co2.style.display = "block";
           break;
         case 4:
           console.log("Checkbox 1 is checked.");
