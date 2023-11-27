@@ -2,7 +2,7 @@ var data, year, code, country, value, filteredData, countryName;
 var slider = document.getElementById("myRange");
 var year = 2015;
 var values = [];
-var sealevel_container_co2, mapContainerMix, mapContainer, lineChartContainer, slidecontainer, sealevelContainer, scatterPlotContainer, linePlotContainer, mapContainerCo2, lineChartContainerCo2, slidecontainerCo2;
+var sealevel_container_temp, sealevel_container_co2, mapContainerMix, mapContainer, lineChartContainer, slidecontainer, sealevelContainer, scatterPlotContainer, linePlotContainer, mapContainerCo2, lineChartContainerCo2, slidecontainerCo2;
 
 var years = [
   "1961",
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
    sealevelContainer = document.getElementById("sealevel-container");
    mapContainerMix = document.getElementById("mapContainerMix");
    sealevel_container_co2 = document.getElementById("sealevel-container-co2");
+   sealevel_container_temp = document.getElementById("sealevel-container-temp");
 
   mapContainer.style.display = "none";
   lineChartContainer.style.display = "none";
@@ -90,8 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
   slidecontainerCo2.style.display = "none";
   
 sealevelContainer.style.display = "none";
+sealevel_container_temp.style.display = "none";
 sealevel_container_co2.style.display = "none";
-  mapContainerMix.style.display = "none";
+mapContainerMix.style.display = "none";
 
 });
 
@@ -119,6 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
     sealevelContainer.style.display = "none";
       mapContainerMix.style.display = "none";
+      sealevel_container_temp.style.display = "none";
+      sealevel_container_co2.style.display = "none";
 
       var checkbox1 = document.getElementById("checkboxA");
       var checkbox2 = document.getElementById("checkboxB");
@@ -156,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 5:
           console.log("Checkbox 1 and Checkbox 3 are checked.");
+          sealevel_container_co2.style.display = "block";
 
           break;
         case 6:

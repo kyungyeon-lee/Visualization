@@ -113,7 +113,7 @@ const seaLevelChart = Highcharts.chart("sealevel-container-co2", {
         {
             name: "Sea Level",
             data: averages.map((avg) => ({
-                x: new Date(avg.year, 0, 1).getTime(),
+                x: avg.year,
                 y: avg.average,
             })),
             yAxis: 0, // Associate this series with the first Y-axis
@@ -127,7 +127,7 @@ const seaLevelChart = Highcharts.chart("sealevel-container-co2", {
         {
             name: "CO2 Data",
             data: co2Valuess.map((co2Valuess) => ({
-                x: new Date(co2Valuess.year, 0, 1).getTime(),
+                x: co2Valuess.year,
                 y: co2Valuess.average,
             })),
             yAxis: 1, // Associate this series with the second Y-axis
