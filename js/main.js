@@ -2,6 +2,7 @@ var data, year, code, country, value, filteredData, countryName;
 var slider = document.getElementById("myRange");
 var year = 2015;
 var values = [];
+var mapContainerMix, mapContainer, lineChartContainer, slidecontainer, sealevelContainer, scatterPlotContainer, linePlotContainer, mapContainerCo2, lineChartContainerCo2, slidecontainerCo2;
 
 var years = [
   "1961",
@@ -67,6 +68,31 @@ var years = [
   "2021",
   "2022",
 ];
+document.addEventListener("DOMContentLoaded", function () {
+   mapContainer = document.getElementById("mapContainer");
+   lineChartContainer = document.getElementById("lineChartContainer");
+   slidecontainer = document.getElementById("slidecontainer");
+
+   mapContainerCo2 = document.getElementById("mapContainerCo2");
+   lineChartContainerCo2 = document.getElementById("lineChartContainerCo2");
+   slidecontainerCo2 = document.getElementById("slidecontainerCo2");
+
+   sealevelContainer = document.getElementById("sealevel-container");
+   mapContainerMix = document.getElementById("mapContainerMix");
+
+  mapContainer.style.display = "none";
+  lineChartContainer.style.display = "none";
+  slidecontainer.style.display = "none";
+  
+  mapContainerCo2.style.display = "none";
+  lineChartContainerCo2.style.display = "none";
+  slidecontainerCo2.style.display = "none";
+  
+sealevelContainer.style.display = "none";
+  mapContainerMix.style.display = "none";
+
+});
+
 function openNav() {
   document.getElementById("sidebar").style.width = "250px";
 }
@@ -80,11 +106,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle checkbox click events
   function handleCheckboxClick(checkboxId) {
     document.getElementById(checkboxId).addEventListener("change", function () {
-      var mapContainer = document.getElementById("mapContainer");
-      var lineChartContainer = document.getElementById("lineChartContainer");
-      var slidecontainer = document.getElementById("slidecontainer");
 
-      var sealevelContainer = document.getElementById("sealevel-container");
+      mapContainer.style.display = "none";
+      lineChartContainer.style.display = "none";
+      slidecontainer.style.display = "none";
+      
+      mapContainerCo2.style.display = "none";
+      lineChartContainerCo2.style.display = "none";
+      slidecontainerCo2.style.display = "none";
+      
+    sealevelContainer.style.display = "none";
+      mapContainerMix.style.display = "none";
 
       var checkbox1 = document.getElementById("checkboxA");
       var checkbox2 = document.getElementById("checkboxB");
@@ -94,11 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const isChecked3 = checkbox3.checked ? 1 : 0;
 
       const conditionIndex = isChecked1 * 4 + isChecked2 * 2 + isChecked3;
-
-      mapContainer.style.display = "none";
-      lineChartContainer.style.display = "none";
-      slidecontainer.style.display = "none";
-      sealevelContainer.style.display = "none";
 
       switch (conditionIndex) {
         case 0:
@@ -111,6 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 2:
           console.log("Checkbox 2 is checked.");
+          mapContainerCo2.style.display = "block";
+          lineChartContainerCo2.style.display = "block";
+          slidecontainerCo2.style.display = "block";
           break;
         case 3:
           console.log("Checkbox 2 and Checkbox 3 are checked.");
@@ -123,14 +153,12 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case 5:
           console.log("Checkbox 1 and Checkbox 3 are checked.");
-          mapContainer.style.display = "block";
-          lineChartContainer.style.display = "block";
-          slidecontainer.style.display = "block";
-          sealevelContainer.style.display = "block";
 
           break;
         case 6:
           console.log("Checkbox 1 and Checkbox 2 are checked.");
+          mapContainerMix.style.display = "block";
+
           break;
         case 7:
           console.log("All checkboxes are checked.");

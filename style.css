@@ -261,3 +261,13 @@ padding: 3rem;
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+
+        /* Add these styles to increase font size for dropdown and input elements */
+        select, input {
+          font-size: 20px; /* Adjust the font size as needed */
+      }
+
+      /* Add these styles to increase font size for button elements */
+      button {
+          font-size: 20px; /* Adjust the font size as needed */
+      }

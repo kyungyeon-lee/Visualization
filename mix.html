@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission vs Temperature</title>
+    <style>
+        /* Add these styles to increase font size for dropdown and input elements */
+        select, input {
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        /* Add these styles to increase font size for button elements */
+        button {
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+    </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<div id="scatter-plot"></div>
+<div>
+  <label for="countryDropdown" style="font-size: 20px;">Select Country:</label>
+  <select id="countryDropdown" onchange="filterData()">
+    <!-- Dropdown options will be added dynamically using JavaScript -->
+  </select>
+</div>
+<div>
+  <label for="minYear" style="font-size: 20px;">Min Year:</label>
+  <input type="number" id="minYear" value="1950" min="1950" max="2023">
+  <label for="maxYear" style="font-size: 20px;">Max Year:</label>
+  <input type="number" id="maxYear" value="2023" min="1950" max="2023">
+  <button onclick="filterData()">Apply Range</button>
+</div>
+
+<div id="line-plot"></div>
+<div>
+  <label for="lineCountryDropdown" style="font-size: 20px;">Select Country:</label>
+  <select id="lineCountryDropdown" onchange="filterLinePlotData()">
+    <!-- Dropdown options will be added dynamically using JavaScript -->
+  </select>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

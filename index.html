@@ -19,6 +19,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 
 
@@ -40,7 +41,7 @@
     <label class="checkbox style-f"><input type="checkbox" id="checkboxC"> Sea level</label> -->
   
       <label class="checkbox style-f">
-        <input type="checkbox" checked="checked" id="checkboxA"/>
+        <input type="checkbox"  id="checkboxA"/>
         <div class="checkbox__checkmark"></div>
         <div class="checkbox__body">Temperature</div>
       </label>
@@ -62,13 +63,45 @@
 </div>
 <div id="lineChartContainer" class="chart-container"></div>
 <!-- 2. co2 -->
+<div id="mapContainerCo2" class="chart-container"></div>
+<div class="slidecontainerCo2" id="slidecontainerCo2">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRangeCo2">
+</div>
+<div id="lineChartContainerCo2" class="chart-container"></div>
 <!-- 3. sea level -->
 <figure class="highcharts-figure">
   <div id="sealevel-container"></div>
 </figure>
+
+<!-- 4. mix.ver -->
+<div id="mapContainerMix" >
+<div id="scatter-plot"></div>
+<div>
+  <label for="countryDropdown" style="font-size: 20px;">Select Country:</label>
+  <select id="countryDropdown" onchange="filterData()">
+    <!-- Dropdown options will be added dynamically using JavaScript -->
+  </select>
+</div>
+<div>
+  <label for="minYear" style="font-size: 20px;">Min Year:</label>
+  <input type="number" id="minYear" value="1950" min="1950" max="2023">
+  <label for="maxYear" style="font-size: 20px;">Max Year:</label>
+  <input type="number" id="maxYear" value="2023" min="1950" max="2023">
+  <button onclick="filterData()">Apply Range</button>
+</div>
+
+<div id="line-plot"></div>
+<div>
+  <label for="lineCountryDropdown" style="font-size: 20px;">Select Country:</label>
+  <select id="lineCountryDropdown" onchange="filterLinePlotData()">
+    <!-- Dropdown options will be added dynamically using JavaScript -->
+  </select>
+</div>
+</div>
 </body>
 <script src="/js/main.js"></script>
 <script src="/js/temperature.js"></script>
 <script src="/js/sealevel.js"></script>
 <script src="/js/co2.js"></script>
+<script src="js/scripts.js"></script>
 </html>
