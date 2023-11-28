@@ -6,6 +6,7 @@
     <title>World map</title>
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style_case8.css">
 
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -13,6 +14,7 @@
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/mapdata/index.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -21,7 +23,8 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/sonification.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
@@ -35,6 +38,41 @@
 </head>
 
 <body>
+
+  <pre id="csv">
+      Year,Sea_Level,Temp,CO2
+      1993,3.87,6.17,4.14
+      1994,8.17,10.75,5.10
+      1995,5.29,10.68,6.07
+      1996,6.60,8.82,6.61
+      1997,0.00,11.26,7.24
+      1998,5.41,7.76,7.44
+      1999,4.37,9.36,7.58
+      2000,6.85,1.99,9.22
+      2001,7.13,3.43,9.90
+      2002,10.38,0.00,11.18
+      2003,14.57,1.90,12.72
+      2004,16.13,6.85,13.87
+      2005,16.16,6.44,14.42
+      2006,11.70,1.81,10.19
+      2007,12.83,0.00,10.95
+      2008,11.54,1.86,10.38
+      2009,11.93,6.91,10.66
+      2010,14.68,2.27,11.92
+      2011,15.52,5.15,12.87
+      2012,14.37,2.33,12.30
+      2013,13.57,5.69,12.00
+      2014,13.79,4.41,11.91
+      2015,14.19,6.69,11.72
+      2016,11.35,3.43,9.68
+      2017,15.71,4.60,12.38
+      2018,15.87,3.86,12.52
+      2019,12.79,2.10,11.20
+      2020,12.57,2.80,11.31
+      2021,15.44,4.94,12.45
+      
+  </pre>
+
   <div id="header">
     <!-- <label class="checkbox style-f"><input type="checkbox" id="checkboxA"> Temperature</label>
     <label class="checkbox style-f"><input type="checkbox" id="checkboxB"> Co2</label>
@@ -106,6 +144,19 @@
   </select>
 </div>
 </div>
+<!-- 5. all -->
+<figure class="highcharts-figure" id="all">
+  <div id="top">
+    <button id="sonify">Play chart</button>  
+  </div>
+  <div id="controls" role="application" tabindex="0" aria-label="Audio chart">
+    <!-- Press spacebar to play and pause chart. Use arrow keys to navigate back and forth and between lines. Use Home/End to go to the beginning and end of a series. Press Esc to silence all audio and reset the chart. -->
+  </div>
+  <div id="container"></div>
+  <p class="highcharts-description">
+    Click "Play chart" to enable Audio.
+    Press spacebar to play and pause chart. Use arrow keys to navigate back and forth and between lines. Use Home/End to go to the beginning and end of a series. Press Esc to silence all audio and reset the chart.</p>
+</figure>
 </body>
 <script src="/js/main.js"></script>
 <script src="/js/temperature.js"></script>
@@ -115,4 +166,6 @@
 
 <script src="/js/co2.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/all.js"></script>
+
 </html>

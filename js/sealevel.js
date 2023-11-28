@@ -31,8 +31,8 @@ function drawSealevel(){
             const range = [Math.min(...values), Math.max(...values)];
             const average = (range[0] + range[1]) / 2;
 
-            ranges.push({ year: parseInt(year), range: range });
-            averages.push({ year: parseInt(year), average: parseFloat(average.toFixed(2)) });
+            ranges.push({ year: year, range: range });
+            averages.push({ year: year, average: parseFloat(average.toFixed(2)) });
         });
 
         console.log(ranges);
@@ -66,17 +66,15 @@ function drawSealevel(){
             },
     
             tooltip: {
+                xDateFormat: '%Y',
                 crosshairs: true,
                 shared: true,
                 valueSuffix: "mm",
+                valueDecimals: 2,
+
             },
     
-            plotOptions: {
-                // series: {
-                //     pointStart: Date.UTC(2022, 6, 1),
-                //     pointIntervalUnit: "day",
-                // },
-            },
+         
     
             series: [
                 {
