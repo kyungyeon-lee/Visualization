@@ -84,13 +84,13 @@
 <!-- 4. mix.ver -->
 <div id="mapContainerMix" >
 <div id="scatter-plot"></div>
-<div>
+<div id="dropdown">
   <label for="countryDropdown" style="font-size: 20px;">Select Country:</label>
   <select id="countryDropdown" onchange="filterData()">
     <!-- Dropdown options will be added dynamically using JavaScript -->
   </select>
 </div>
-<div>
+<div id="labels">
   <label for="minYear" style="font-size: 20px;">Min Year:</label>
   <input type="number" id="minYear" value="1950" min="1950" max="2023">
   <label for="maxYear" style="font-size: 20px;">Max Year:</label>
@@ -99,7 +99,7 @@
 </div>
 
 <div id="line-plot"></div>
-<div>
+<div id="dropdown">
   <label for="lineCountryDropdown" style="font-size: 20px;">Select Country:</label>
   <select id="lineCountryDropdown" onchange="filterLinePlotData()">
     <!-- Dropdown options will be added dynamically using JavaScript -->

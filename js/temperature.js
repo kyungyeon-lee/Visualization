@@ -73,7 +73,7 @@
                 map: topology
             },
             title: {
-                text: 'Global Temperature Changes'
+                text: 'Global Temperature Changes - ' + year
             },
             colors: ['rgba(255,0,0,1)', 'rgba(255,0,0,1)', 'rgba(19,64,117,0.4)',
             'rgba(19,64,117,0.5)', 'rgba(19,64,117,0.6)', 'rgba(19,64,117,0.8)', 'rgba(19,64,117,1)'],
