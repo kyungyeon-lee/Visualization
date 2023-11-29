@@ -45,13 +45,13 @@ function drawSealevel() {
   const filteredYears = years.filter((year) => year >= 1994);
 
   // Calculate average CO2 for each filtered year
-  const co2Valuess = filteredYears.map((year, index) => {
+  const temp = filteredYears.map((year, index) => {
     return {
       year: year,
       average: parseFloat(noSmoothingValues[index].toFixed(2)),
     };
   });
-  console.log(co2Valuess);
+  console.log(temp);
 
   // Assuming 'co2Values' is calculated as per the previous example
   // Load sea level data
@@ -148,7 +148,7 @@ function drawSealevel() {
         },
         {
           name: "Temperature (LAND-OCEAN TEMPERATURE INDEX)",
-          data: co2Valuess.map((co2Valuess) => ({
+          data: temp.map((co2Valuess) => ({
             x: co2Valuess.year,
             y: co2Valuess.average,
           })),

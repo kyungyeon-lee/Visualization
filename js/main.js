@@ -167,7 +167,7 @@ intro.style.display = "none";
           break;
         case 5:
           console.log("Checkbox 1 and Checkbox 3 are checked.");
-          sealevel_container_co2.style.display = "block";
+          sealevel_container_temp.style.display = "block";
 
           break;
         case 6:
