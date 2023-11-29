@@ -6,7 +6,7 @@ Welcome to the "Understanding Global Warming through Interactive Data Visualizat
 To run this project locally, follow these simple steps:
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/your-username/global-warming-visualization.git](https://github.com/kyungyeon-lee/Visualization.git)](https://github.com/kyungyeon-lee/Visualization.git)
+   git clone https://github.com/kyungyeon-lee/Visualization.git
 2. **Navigate to the Project Directory:**
    ```bash
    cd visualization-main
