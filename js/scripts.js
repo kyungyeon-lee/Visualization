@@ -70,7 +70,7 @@ function createScatterPlot(data) {
       },
       range: [-3, 3],
     },
-    plot_bgcolor: 'aliceblue',
+    // plot_bgcolor: 'w',
     gridcolor: 'lightgray'
   };
 
@@ -215,7 +215,7 @@ function createLinePlot(data) {
       overlaying: 'y',
       side: 'right'
     },
-    plot_bgcolor: 'aliceblue',  // Add background color
+   plot_bgcolor: 'white',  // Add background color
     gridcolor: 'black'  // Add grid color
   };
 
