@@ -141,6 +141,8 @@ intro.style.display = "none";
       switch (conditionIndex) {
         case 0:
           console.log("No checkboxes are checked.");
+          intro.style.display = "block";
+
           break;
         case 1:
           console.log("Checkbox 3 is checked.");
