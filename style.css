@@ -11,7 +11,10 @@
 .body {
 padding: 3rem;
 }
-
+#intro {
+  text-align: center;
+  padding: 3rem;
+  }
 /* Styles for mapContainer */
 #mapContainer {
   height: 400px; /* Set the desired height */
